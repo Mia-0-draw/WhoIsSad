@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <script src="ui.js"></script>
+    <script src="sketch.js"></script>
+    <script>
+      let bgm;
+  
+      // 检查 localStorage 是否已经保存音频播放状态
+      if (!bgm) {
+          const bgmSrc = '../music/spring.mp3'; // 音乐文件路径
+          const savedTime = parseFloat(localStorage.getItem('bgmCurrentTime')) || 0;
+  
+          // 创建音频对象并设置属性
+          bgm = new Audio(bgmSrc);
+          bgm.currentTime = savedTime; // 从保存的进度继续播放
+          bgm.loop = true;
+          bgm.volume = parseFloat(localStorage.getItem('bgmVolume')) || 0.3;
+  
+          // 自动播放 BGM
+          bgm.play();
+  
+          // 保存到 localStorage 中标记音频正在播放
+          localStorage.setItem('bgmPlaying', true);
+      }
+  
+      // 每 500 毫秒保存播放状态
+      setInterval(() => {
+          if (bgm) {
+              localStorage.setItem('bgmCurrentTime', bgm.currentTime);
+              localStorage.setItem('bgmVolume', bgm.volume);
+          }
+      }, 500);
+  
+      // 页面关闭时，确保播放状态保存
+      window.addEventListener('beforeunload', () => {
+          if (bgm) {
+              localStorage.setItem('bgmCurrentTime', bgm.currentTime);
+          }
+      });
+  </script>
+  
+  </body>
+</html>
