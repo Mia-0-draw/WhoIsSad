@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+   
+
+  </head>
+  <body>
+    <main>
+      <script src="ui.js"></script>
+      <script src="sketch.js"></script>
+      <script>
+        let bgm;
+        // BGM播放
+        if (!localStorage.getItem('bgmPlaying')) {
+            bgm = new Audio('music/spring.mp3'); // 音乐文件路径（相对于当前文件）
+            bgm.loop = true; // 循环播放
+            bgm.volume = 0.3; // 设置音量
+            bgm.play(); // 播放音乐
+            localStorage.setItem('bgmPlaying', true); // 标记 BGM 已播放
+        }
+    
+        // 防止重复播放
+        window.addEventListener('load', () => {
+            const existingAudio = document.querySelector('audio');
+            if (!existingAudio) {
+                bgm = new Audio('music/spring.mp3'); // 补充播放音频
+                bgm.loop = true;
+                bgm.play();
+            }
+        });
+    
+       
+    </script>
+    
+    </main>
+
+  </body>
+</html>

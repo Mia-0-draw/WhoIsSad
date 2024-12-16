@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Page</title>
+    <style>
+        /* 页面整体样式 */
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 容器样式 */
+        .container {
+            width: 85%;
+            max-width: 900px;
+            margin: 60px auto 40px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            position: relative; /* 使日期定位相对于容器 */
+        }
+
+        /* 标题样式 */
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* 部分内容样式 */
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section p {
+            font-size: 18px;
+            margin: 15px 0;
+            color: #555;
+        }
+
+        /* 超链接样式 */
+        .section a {
+            color: #80C1D1;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .section a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        /* 返回按钮样式 */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #80C1D1;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #6f9da5;
+        }
+
+        /* 使页面更加对称 */
+        .section p {
+            margin-left: 10px;
+        }
+
+        /* 日期样式 */
+        .date {
+            font-size: 12px;
+            color: #808080;
+            margin-top: 20px;
+            text-align: right; /* 右对齐 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 返回按钮 -->
+    <a href="../index.html" class="back-button">Back</a>
+
+    <!-- 资源容器 -->
+    <div class="container">
+        <h1>Resource Information</h1>
+
+        <!-- 模型来源 -->
+        <div class="section">
+            <p><strong>Model Source:</strong></p>
+            <p>MetaPerson Creator <a href="https://metaperson.avatarsdk.com/?_gl=1*rlg0bo*_ga*MTk2NTYxNDQ0Ni4xNzMyMjQ2ODY5*_ga_RK28V9S3X1*MTczMjI1NTgxMy4yLjEuMTczMjI1NTk3Mi41NS4wLjA.&_ga=2.134188686.1200647990.1732246870-1965614446.1732246869" target="_blank">Link</a></p>
+        </div>
+
+        <!-- BGM 来源 -->
+        <div class="section">
+            <p><strong>BGM Source:</strong></p>
+            <p>1. Music track: Spring by Aylex <br>
+            Source: <a href="https://freetouse.com/music" target="_blank">Free To Use Music for Video</a></p>
+        </div>
+
+        <!-- Sound Effects 来源 -->
+        <div class="section">
+            <p><strong>Sound Effect 1 Source:</strong></p>
+            <p>By <a href="https://pixabay.com/users/floraphonic-38928062/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=224578" target="_blank">floraphonic</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=224578" target="_blank">Pixabay</a></p>
+        </div>
+
+        <div class="section">
+            <p><strong>Sound Effect 2 Source:</strong></p>
+            <p>By <a href="https://pixabay.com/users/floraphonic-38928062/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=229503" target="_blank">floraphonic</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=229503" target="_blank">Pixabay</a></p>
+        </div>
+
+        <!-- 新增：校园模型和使用软件 -->
+        <div class="section">
+            <p><strong>Campus Model Source:</strong></p>
+            <p>Self-Modeling</p>
+        </div>
+
+        <div class="section">
+            <p><strong>Software Used:</strong></p>
+            <p>Blender3D, p5.js, VSCode</p>
+        </div>
+
+        <!-- 日期显示 -->
+        <div class="date">
+            December 16, 2024
+        </div>
+    </div>
+
+</body>
+</html>
